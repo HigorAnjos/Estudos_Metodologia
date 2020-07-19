@@ -1,0 +1,14 @@
+CREATE TABLE card (
+	id
+	concluido bool(1) enum('0','1'),
+	materia
+	topico_estudado varchar(30) NOT NULL,
+	descricao_estudado varchar(300),
+	data_revisao0 date NOT NULL,
+	data_revisao1 date NOT NULL,
+	data_revisao2 date NOT NULL,
+	data_revisao3 date NOT NULL,
+	revisao_atual date NOT NULL,
+	qtd_revisao decimal(1)
+
+)DEFAULT CHARSET = utf-8;

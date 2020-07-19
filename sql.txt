@@ -1,0 +1,46 @@
+create TABLE card (
+    id INT NOT NULL auto_increment,
+    concluido boolean,
+    topico_estudado varchar(30) NOT NULL,
+    descricao_estudado varchar(300),
+    PRIMARY KEY (id)
+    
+) DEFAULT CHARSET = utf8;
+
+create TABLE revisar (
+    id INT NOT NULL auto_increment,
+    primeira_data date,
+    segunda_data date,
+    terceira_data date,
+    quarta_data date,
+    qtd_revisoes decimal(1),
+    revisar_atual date,
+    PRIMARY KEY (id)
+    
+) DEFAULT CHARSET = utf8;
+
+create table materias(
+	
+	id int not null auto increment,
+	materia varchar(30),
+	PRIMARY KEY (id)	
+	
+) DEFAULT CHARSET = utf8;
+
+
+preciso visualizar no php
+
+TABLE card
+concluido boolean,
+topico_estudado
+descricao_estudado
+TABLE revisar
+ revisar_atual 
+qtd_revisoes
+
+table materias
+materia
+
+select  materias.materia, card.concluido, card.topico_estudado, card.descricao_estudado, revisar.revisar_atual, revisar.qtd_revisoes from card
+inner join revisar on revisar.id_card =card.id 
+inner join materias on materias.id = revisar.id_materia;	
